@@ -1,12 +1,3 @@
-I recently had an interview for a job that involved introducing responsive techniques to an existing site. The site was very densely packed with information, and so used a variety of menu types. I wanted all of these menus to remain as they were on desktop platforms, but to simplify into accordion menus when scaled down for mobile.
-
-This is a simple application of the idea of separating content from behaviour, and behaviour and from style, but I could find no existing jQuery scripts that worked with such flexability. They all assumed a format for the menu -- vertical tabs, horizontal tabs, <strong>or</strong> accordions -- and worked solely in that format.
-
-So, as an example of how I would approach this, I created a simple jQuery module that would handle the menus' behaviour in a style-agnostic way, along with seperate stylesheets for each menu type. The script doesn't know or care how the menu appears, it's only job is to trigger the appropriate show/hide animation for whatever screen size it appears to be running on at a given moment.
-
-Since I was not ultimately chosen to undertake the project, I've uploaded my efforts to github. The appearance of the desktop menus are based on jvert-tabs and ui-tabs, as those were the plugins my potential clients were using on their site initially, but as I wanted to work with nested menus for the purposes of the accordian-style presentation, I created my own stylesheets from scratch.
-
-
 
 Dynalist jQuery Plugin
 ======================
