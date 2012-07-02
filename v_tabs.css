@@ -1,0 +1,91 @@
+
+/* SHARED STYLES */
+
+	.vertical_tabs {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.vertical_tabs > li {
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	/* all should be visible in the event of disabled JavaScript */
+	.vertical_tabs > li, .vertical_tabs > li.open {
+		display: block;
+	}
+	
+	.vertical_tabs > li > :first-child {
+		cursor: pointer;
+	}
+
+/* DESKTOP ONLY */
+
+@media only screen and (min-width: 960px) {
+
+	/* GENERAL LAYOUT CONCERNS */
+
+	.vertical_tabs {
+		position: relative; /* child content-panel will be absolutely positionned relative to this. */
+	}
+
+	.vertical_tabs > li > *:not(:first-child) {
+		position: absolute; /* Absolute relative to parent ul. I love this trick. */
+		top: 0px;
+		right: 0px;
+	}
+
+	/* APPEARANCE */
+	.vertical_tabs {
+		height: 27em;
+		border-style: solid;
+		border-color: black;
+		border-width: 1px 1px 1px 1px;
+	}
+
+	.vertical_tabs > li {
+		margin: 0 0 0 -1px;
+		padding: 0 .5em;
+		height: 2em;
+		line-height: 2em;
+		border-width: 0px 1px 1px 1px;
+		border-color: black;
+		border-style: solid;
+		background-color: #DDDDDD;
+		width: 30%;
+	}
+
+	.vertical_tabs > li > *:not(:first-child) {
+		width: 65%;
+	}
+
+	.vertical_tabs > li.open {
+		background-color: #fff;
+		border-right-width: 0px;
+		z-index: 10;
+	}
+	.vertical_tabs > li.open > *:first-child {
+		margin-left: 1em;
+	}
+	
+	
+}
+
+/* START: Mobile Rules 
+   Applies to both mobile and tablet screen sizes. */
+@media only screen and (max-width: 959px) {
+
+	.vertical_tabs {
+		background-color: #DDDDDD;
+	}
+	
+	.vertical_tabs > li > *:not(:first-child) {
+		background-color: #fff;
+		color: #000;
+		border: 1px solid #DDDDDD;
+	}
+
+}
