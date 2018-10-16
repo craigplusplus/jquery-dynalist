@@ -1,5 +1,5 @@
 
-Dynalist jQuery Plugin
+Dynalist jQuery Plugin -- OBSOLETE
 ======================
 
 This is a script that handles a list with nested collapsing sections in a style-agnostic way. It is not assumed that the list is formatted as tabbed data, or an accordion list, or any other format. These presentational concerns are restricted to the accompanying stylesheets.
